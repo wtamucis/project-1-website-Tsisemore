@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter to Santa Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="letter-body">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Naughty_or_Nice.html">Naughty or Nice</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+    <div class="letter_text">
+    <h2 id="letter-h2" class="letter_text">And What Would <i>you</i> like for Christmas?</h2>
+    <p class="letter_text">Are you ready to write a letter to Santa? From toys you've been dreaming about to the little surprises you hope Santa might think up himself.
+        Don't forget to take the <a href="Naughty_or_Nice.html">Naughty or Nice Quiz</a> to see if you've made it onto Santa's Nice List this year! 
+        There's a thrill in air as you sit down to write the perfect letter, hoping to catch Santa's eye and make this Christmas unforgettable. 
+       
+    </p>
+    </div>
+        <section role="separator">
+  <div class="letter_text">
+    <h2 id="letter-h2" class="letter_text">Having a hard time thinking about what you want for Christmas? Here are some examples!<br>
+    </h2>    
+        <ul>
+            <li>"All I want for Christmas is my two front teeth."</li>
+            <li>"Raindrops on roses and whiskers on kittens. Bright copper kettles and warm woolen mittens."</li>
+            <li>"I want a hippopotamus for Christmas."</li>
+            <li>"A pair of Hopalong boots and a pistol that shoots."</li>
+        </ul>
+    <p class="letter_text">    
+       As you write your wish-list, don't forget that Christmas is just as much about giving as it is getting. Think of all the people you love and are greatful for in your life and think of what you can give them to <i>make their spirits bright</i> this year.
+    </p>
+    </div>
+        </section>
+        <section role="separator">
+          <div class="letter_text">
+    <h2 id="letter-h2" class="letter_text">Sit back and relax</h2>
+    <p class="letter_text">Now sit back with a cup of hot cocoa and a classic Christmas movie,<br> 
+    and dream of the magic that Christmas morning will bring!<br>
+    Here are a few of our favorites:
+    </p>
+    <ul>
+      <li>"White Christmas"</li>
+      <li>"Home Alone"</li>
+      <li>"Elf"</li>
+      <li>"The Polar Express"</li>
+      <li>"A Charlie Brown Christmas"</li>
+    </ul>
+    <p class="letter_text">    
+      Once you've written your letter, it's time to send it off to the North Pole! You can mail it to Santa Claus, <br>
+      <b>123 Elf Road, North Pole, 88888</b>, or if you prefer, you can use the form below to send your letter electronically. <br>
+      Just fill in your name, age, where you live, and what you'd like for Christmas, and click "Send to Santa".<br>
+      Santa's elves will make sure your letter gets to him right away!
+    </p>
+  </div>
+  </section>
+  <section role="separator">
+    <div class="center-form">
+    <form id="santaForm" method="post" action="https://www.w3schools.com/action_page.php">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Your Age:</label><br>
+        <input type="text" id="age" name="age" required><br><br>
+
+        <label for="home">Where do you live?</label><br>
+        <input type="text" id="home" name="home" placeholder="ex. The green house on the corner" size="40" required><br><br>
+
+        <label for="wishes">What would you like for Christmas?</label><br>
+        <textarea id="wishes" name="wishes" rows="4" cols="50" required></textarea><br><br>
+
+    <button type="submit">Send to Santa</button>
+    </form>
+    <div id="confirmation" style="display:none; margin-top:15px;">
+        <!-- Confirmation message will appear here -->
+<script>
+  const form = document.getElementById('santaForm');
+  const confirmation = document.getElementById('confirmation');
+
+  form.addEventListener('submit', () => {
+    // Just show confirmation, no preventDefault
+    confirmation.style.display = 'block';
+    confirmation.textContent = "Sending your letter to Santa...";
+    // The browser will continue with the redirect automatically
+  });
+</script>
+    </div> 
+    </div>  
+</div>
+</section>
+  <div style="display:flex; justify-content:center;">
+  </div>
+  <div class="img-row" style="display:flex; justify-content:space-between; align-items:center;">
+    <img src="images/santa_letter.jpg" alt="santa letter" class="santa-img">
+    <img src="images/letter_to_santa.jpg" alt="letter to santa" class="letter-img">
+    <img src="images/santa_letter.jpg" alt="santa letter" class="santa-img">
+  </div>
+</body>
+</main>
+<footer>
+    <p class="footer-text">Image cited:<br>
+        Balashova, Irina. (2025). Christmas envelope with stamps, seals, gingerbread houses and inscriptions to Santa Claus. [Stock image]. Adobe Stock. https://stock.adobe.com/search?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Avideo%5D=1&filters%5Bcontent_type%3Atemplate%5D=1&filters%5Bcontent_type%3A3d%5D=1&filters%5Bcontent_type%3Aimage%5D=1&k=letter+to+santa&order=relevance&limit=100&search_page=1&search_type=usertyped&acp=&aco=letter+to+santa&get_facets=0&asset_id=534247425<br>
+        Oksana. (2025). Cartoon illustration of Santa Claus holding empty paper or wish list isolated on white background. Merry Christmas and Happy New Year. [Stock image]. Adobe Stock. https://stock.adobe.com/images/cartoon-illustration-of-santa-claus-holding-empty-paper-or-wish-list-isolated-on-white-background-merry-christmas-and-happy-new-year/950518852?prev_url=detail
+    </p>
+</footer>
+</html>
