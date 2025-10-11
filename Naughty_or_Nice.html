@@ -7,19 +7,20 @@
     <title>Naughty or Nice Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="naughty-body">
+<body class="body">
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="Naughty_or_Nice.html">Naughty or Nice</a></li>
                 <li><a href="Letter_to_Santa.html">Letter to Santa</a></li>
             </ul>
         </nav>
 
     </header>
     <main id="main-content">
-    <h2 class="intro_naughty">Welcome to the Naughty or Nice Page</h2>
-    <p class="p_naughty">Santa's Naughty or Nice List is one of the most legendary documents in the world and it's always growing and changing!
+    <h2 class="intro">Welcome to the Naughty or Nice Quiz</h2>
+    <p class="p">Santa's Naughty or Nice List is one of the most legendary documents in the world and it's always growing and changing!
         The Nice List sparkles with golden letters, glowing a little brighter every time someone shares, helps, or shows kindness.
         The Naught List, on the other hand, is written in <i>wiggly, smoky ink</i> that sometimes puffs into a little <b>"poof!"</b> when someone makes a better choice and hops over to the Nice side.
         Santa checks his list twice a day to make sure he never misses when someone decides to be extra good or needs a little reminder to be better.
@@ -27,37 +28,41 @@
         Write down your good deeds and kind acts as well as the ways you plan to change some nuaght behavior, and who knows? 
         You might just find your name shining on the Nice List this Christmas! 
     </p>
-        <h2 class="h2_naughty">Are you Naughty or Nice?</h2>
+        <h2 class="intro">Are you Naughty or Nice?</h2>
 <div class="container">
     <img src="images/list.jpg" alt="Sant's List" class="list-img">
     <div class="quiz-layout">
-    <div class="quiz">    
-    <form id="quizForm">
-        <p>Did you help someone in need this year?</p>
-        <label><input type="radio" name="q1" value="yes"> Yes</label>
-        <label><input type="radio" name="q1" value="no"> No</label>
+        <div class="quiz">    
+            <form id="quizForm">
+                <p>Did you help someone in need this year?</p>
+                <label><input type="radio" name="q1" value="yes"> Yes</label>
+                <label><input type="radio" name="q1" value="no"> No</label>
 
-            <p>Do you say sorry when you hurt someone's feelings?</p>
-        <label><input type="radio" name="q2" value="yes"> Yes</label>
-        <label><input type="radio" name="q2" value="no"> No</label>
+                <p>Do you say sorry when you hurt someone's feelings?</p>
+                <label><input type="radio" name="q2" value="yes"> Yes</label>
+                <label><input type="radio" name="q2" value="no"> No</label>
 
-            <p>Do you listen to your mother and father?</p>
-        <label><input type="radio" name="q3" value="yes"> Yes</label>
-        <label><input type="radio" name="q3" value="no"> No</label>
+                <p>Do you listen to your mother and father?</p>
+                <label><input type="radio" name="q3" value="yes"> Yes</label>
+                <label><input type="radio" name="q3" value="no"> No</label>
 
-            <p>Are you nice to your brothers and sisters?</p>
-        <label><input type="radio" name="q4" value="yes"> Yes</label>
-        <label><input type="radio" name="q4" value="no"> No</label>
+                <p>Are you nice to your brothers and sisters?</p>
+                <label><input type="radio" name="q4" value="yes"> Yes</label>
+                <label><input type="radio" name="q4" value="no"> No</label>
 
-        <p>Do you keep your room clean?</p>
-        <label><input type="radio" name="q5" value="yes"> Yes</label>
-        <label><input type="radio" name="q5" value="no"> No</label>
-            <div></div>
-            <br>
-        <button id="submit" type="submit">Submit</button>
-        
-        <p id="result"></p>
-    </form>
+                <p>Do you keep your room clean?</p>
+                <label><input type="radio" name="q5" value="yes"> Yes</label>
+                <label><input type="radio" name="q5" value="no"> No</label>
+                
+                <div></div>
+
+                <button id="submit" type="submit">Submit</button>
+            </form>
+            
+        </div> 
+
+        <div id="result"></div>
+    </div>    
         <script>
         document.getElementById('quizForm').onsubmit = function(e) {
         e.preventDefault();
@@ -73,28 +78,10 @@
         if (q3 === 'yes') score++;
         if (q4 === 'yes') score++;
         if (q5 === 'yes') score++;
-        document.getElementById('result').textContent = score >= 3 ? "Nice!" : "Naughty!";
+        document.getElementById('result').innerHTML = score >= 3 ? "Nice!<br> The elves aren't Santa's only helpers this year!<br></br>Being on the Nice List is one of the greatest honors anybody could have. Santa is busy year-round making toys for all of God's children. If your name is on the Nice List, that means the joy of Christmas lives within you, and that you are one of Santa's best helpers.<br> Your smiling face and good deeds uplift those around you.<br></br>Keep up the good work and remember...<br> if you make a mistake, a warm hug can go a long way to make ammends.<br> Merry Christmas!" : "Naughty... That's okay!<br></br>Nobody is perfect and there are so many opportunies around you to get back Santa's Nice List. Think of what you can do differently or who you could make smile today and never give up!<br></br>Christmas is all about finding the good in people and in yourself. Acts of service, kind words, and being the kind of person that Santa can count on will uplift those around you and make the world a better place.<br></br>Remember, Santa is always watching and it's never too late to change your ways.<br> Merry Christmas!";
         };
-</script>
-    </div>
-        <div class="side-buttons">
-                <button id="btn1" onclick="showText('text1')">Are you naughty?</button>
-                <button id="btn2" onclick="showText('text2')">Are you nice?</button>
-                <div id="text1" style="display:none;">That's okay!<br></br>Nobody is perfect, but there are so many opportunies around you to get back Santa's Nice List.<br> Think of what you can do differently or who you could make smile today and never give up!<br></br>Kind words and actions can uplift those around you and make the world a better place.</div>
-                <div id="text2" style="display:none;">The elves aren't Santa's only helpers this year!<br></br>Being on the Nice List is one of the greatest honors anybody could have.<br> Santa is busy year-round making toys for all of God's children.<br> If your name is on the Nice List, that means the joy of Christmas lives within you,<br> and that you are one of Santa's best helpers.<br> Your smiling face and good deeds uplift those around you.<br></br>Keep up the good work and remember...<br> if you make a mistake, a warm hug can go a long way to make ammends.<br> Merry Christmas!</div>
-                <script>
-                function showText(textId, otherBtnId) {
-                // Hide both messages
-                document.getElementById('text1').style.display = 'none';
-                document.getElementById('text2').style.display = 'none';
-                // Show the selected message
-                document.getElementById(textId).style.display = 'block';
-                // Disable the other button
-                document.getElementById(otherBtnId).disabled = true;
-                }
-                </script>
-        </div>
-    </div>
+        </script>
+
 </div>
 
 </body>
