@@ -1,4 +1,188 @@
-.golden-img {
-    max-width: 50%;
-    height: auto;
+body {
+    width: 80%;
+    margin: 0 auto;
 }
+#main-content {
+    width: auto;
+    margin: auto;
+    align-items: center;
+}
+nav {
+    background: #ca7900;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    overflow: hidden;
+}
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+}
+nav > ul > li {
+    color: #FFF8E7;
+    display: inline-block;
+}
+nav > ul > li:hover {
+    background-color: white;
+    color: green;
+    cursor: pointer;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: inherit;
+    padding: 14px 16px;
+    font-weight: bold;
+}
+/*Index Page*/
+/*Index Page*/
+.body {
+    background-image: url(images/village_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
+    background-color:beige;
+}
+#main-content {
+    background-color: #FAF3E0E6; /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.intro {
+    text-align: center;
+    font-family: 'comic sans MS';
+    font-size: 30px;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.p {
+    text-align: left;
+    font-family: 'comic sans MS';
+    font-size: 20px;
+    color: #333333;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+@keyframes pulse {
+    0%, 100% {
+        text-shadow:
+            0 0 4px red,
+            0 0 8px red,
+            0 0 12px red,
+            0 0 15px red;
+    }
+    50% {
+        text-shadow:
+            0 0 15px red,
+            0 0 23px red,
+            0 0 30px red,
+            0 0 40px red;
+    }
+}
+.rudolph {
+    color: red;
+    animation: pulse 3s infinite alternate;
+}
+.reindeer-img {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.elves-img {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Naughty or Nice Page*/
+/*Naughty or Nice Page*/
+
+.list-img {
+  width: 300px;
+  margin-right: 20px;
+  height:auto;
+}
+.quiz-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.quiz {
+  flex: 0 0 auto;
+}
+#submit { 
+    margin-top: 20px;
+}
+#result {
+    flex: 1;
+    text-align: left;
+    min-height: 1.5em;
+    font-family: 'comic sans MS';
+    font-size: 20px;
+    color: #b22222;
+}
+
+/*Letter to Santa Page*/
+/*Letter to Santa Page*/
+
+section[role="separator"] {
+    border-top: 2px solid #333333; /* charcoal line */
+    margin: 20px 0; /* Space above and below the line */
+    width: 100%;
+}
+.center-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10px; /* Restore previous space below form */
+  padding-top: 50px; /* Add space above the form */
+}
+.letter-img {
+    width: 300px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+.santa-img {
+    width: 500px;
+    height: auto;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.container {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+}
+footer {
+    text-align: left;
+    font-size: 8px;
+}
+
